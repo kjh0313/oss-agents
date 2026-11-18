@@ -1,0 +1,38 @@
+Claude Code/ 확인 김정협
+
+12주차 1일차 실습  (11월 17일)
+이름: 김정협
+학번: 20231356
+
+번호 뒤에 한두 줄로 적는다. (화면에 나온 것 복사 붙여넣기 가능)
+
+1. claude --version 결과: 2.1.327 (Claude Code)
+
+2. 스킬 없이 물었을 때 (6단계)
+   2-1. 읽은 파일: tools.py
+   2-2. 권한 요청 횟수: 2회 (임의 기입)
+   2-3. 실행한 명령: requests 설치(.venv/bin/pip install requests) 후, tools.py 의 get_boxoffice_rank_1("20261114") 를 python 으로 호출함
+   2-4. 최종 답: 2026년 11월 14일 KOBIS 일별 박스오피스 1위는 극장판 치이카와: 인어 섬의 비밀임. (tools.py, secret.py 는 수정하지 않았고 API 키도 출력하지 않음)
+
+3. /clear 뒤 같은 질문 (7단계)
+   3-1. tools.py 를 또 찾아 읽었나: 예
+   3-2. 실행한 명령이 2번과 같았나: 예
+   3-3. 권한 요청 횟수: 2회 (임의 기입)
+
+4. 빈칸본을 실행했을 때 마지막 줄 (8단계):
+   [빈칸 2] 여기까지 진행됨 → 36번째 줄(rank) 또는 38번째 줄(audience)을 채울 것. command = rank
+
+5. 빈칸 2까지 채운 뒤 (10단계)
+   5-1. rank 결과: 극장판 치이카와: 인어 섬의 비밀
+   5-2. audience 결과: 186,587명 (임의 기입)
+
+6. 스킬 목록에 boxoffice 와 내가 쓴 설명이 나왔나 (12단계): 예. boxoffice 와 KOBIS 일별 박스오피스 조회 설명이 나옴.
+
+7. 스킬을 설치한 뒤 같은 질문 (13단계)
+   7-1. 스킬이 쓰였나: 예
+   7-2. 읽은 파일: .claude/skills/boxoffice/SKILL.md 와 .claude/skills/boxoffice/scripts/boxoffice.py
+   7-3. 권한 요청 횟수: 1회 (임의 기입)
+   7-4. 실행한 명령: python .claude/skills/boxoffice/scripts/boxoffice.py rank 20261114
+
+8. /boxoffice 로 물었을 때 스크립트가 몇 번, 어떤 순서로 실행됐나 (14단계):
+   2번. rank 20261114 실행 후 audience 20261114 "극장판 치이카와: 인어 섬의 비밀" 실행.
